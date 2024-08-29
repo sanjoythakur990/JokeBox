@@ -1,0 +1,95 @@
+/* Basic styles for the landing page */
+.homepage-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    background: linear-gradient(to bottom, #a2c2e2, #f0f0f0); /* Gradient background */
+    padding: 20px;
+    font-family: 'Arial', sans-serif; /* Modern font */
+}
+
+.welcome-section {
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif; /* Stylish font for headings */
+    font-weight: 700; /* Bold text */
+}
+
+p {
+    font-size: 1.2rem;
+    color: #555;
+    margin: 20px auto;
+    line-height: 1.5;
+    max-width: 600px;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.btn {
+    padding: 15px 25px;
+    font-size: 1.1rem;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase; /* Uppercase text */
+    font-weight: 600; /* Bold text */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Drop shadow for depth */
+}
+
+.btn-register {
+    background-color: #007bff;
+}
+
+.btn-register:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px); /* Slightly lift the button */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.btn-login {
+    background-color: #28a745;
+}
+
+.btn-login:hover {
+    background-color: #218838;
+    transform: translateY(-3px); /* Slightly lift the button */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+/* Media queries for responsiveness */
+@media (min-width: 768px) {
+    .button-container {
+        flex-direction: row;
+    }
+
+    .btn {
+        width: auto;
+        max-width: none;
+    }
+}
+
+@media (min-width: 1200px) {
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    p {
+        font-size: 1.4rem;
+    }
+}
