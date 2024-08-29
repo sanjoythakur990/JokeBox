@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from "react";
+import Signup from "./Components/Signup";
+import "./style.css"
+import Login from "./Components/Login";
+import Dashboard from "./Components/Dashboard";
+import { Routes, Route } from "react-router-dom";
 
-function App() {
+
+const App=()=>{
+  // const [token, setToken] =useState("")
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/* <Signup setToken={setToken}/>
+      <Login setToken={setToken}/>
+      <Dashboard token={token}/> */}
+
+      <Routes>
+        <Route path="/" element={<Signup />} />
+        <Route path="/login" element={<Login />} />           {/* we no longer need props because we are passing token from UserContext*/}
+        <Route path="/dashboard" element={<Dashboard />} />
+      </Routes>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
